@@ -12,10 +12,9 @@ export class AppareilComponent implements OnInit {
   
     @Input() appareilName: string;
     @Input() appareilStatus: string;
-    @Input() index: number;
+    @Input() indexOfAppareil: number;
 
     constructor(private appareilService: AppareilService) {
-
     }
 
     ngOnInit() {
@@ -27,17 +26,17 @@ export class AppareilComponent implements OnInit {
 
     getColor() {
         if (this.appareilStatus === 'éteint') {
-        return 'red';
+            return 'red';
         } else {
-        return 'green';
+            return 'green';
         }
     }
 
     onSwitch() {
         if(this.appareilStatus === 'allumé') {
-          this.appareilService.switchOffOne(this.index);
+            this.appareilService.switchOffOne(this.indexOfAppareil);
         } else if(this.appareilStatus === 'éteint') {
-          this.appareilService.switchOnOne(this.index);
+            this.appareilService.switchOnOne(this.indexOfAppareil);
         }
     }
 
