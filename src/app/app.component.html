@@ -4,7 +4,6 @@
         <div class="collapse navbar-collapse">
 
             <ul class="navbar-nav">
-
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="auth">Authentification</a>
                 </li>
@@ -13,9 +12,14 @@
                     <a class="nav-link" routerLink="appareils">Appareils</a>
                 </li>
 
-            </ul>
+            </ul>          
 
         </div>
+
+        <div class="navbar-right">
+            <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
+        </div>
+
     </div>
 </nav>
 
