@@ -7,7 +7,7 @@ export class AppareilService {
 
     appareilsSubject = new Subject<any[]>();
 
-    // private appareils = [
+    // appareils = [
     //     {
     //         id: 1,
     //         name: 'Machine à laver',
@@ -40,7 +40,7 @@ export class AppareilService {
     }
 
     emitAppareilSubject() {
-        //this.appareilsSubject.next(this.appareils.slice());
+        // this.appareilsSubject.next(this.appareils.slice());
         this.appareilsSubject.next(this.appareils);
     }
     
